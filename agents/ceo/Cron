@@ -1,0 +1,61 @@
+# CronJobs
+
+## Briefing Executivo Diário
+
+- **Frequência:** Todo dia útil às 07h30 BRT (`30 7 * * 1-5`)
+- **Trigger:** Agendamento automático
+- **Agent:** CEO
+- **Skill:** Briefing Executivo Diário
+- **Input:** Relatórios das lideranças, KPIs do dia anterior, alertas abertos
+- **Ação:** Consolidar e enviar digest executivo ao fundador
+- **Output:** Mensagem no Slack com status por frente, alertas e top 3 prioridades do dia
+
+## Check-in Semanal com Lideranças
+
+- **Frequência:** Toda segunda-feira às 09h00 BRT (`0 9 * * 1`)
+- **Trigger:** Agendamento automático
+- **Agent:** CEO
+- **Skill:** Orquestração de Lideranças
+- **Input:** Status de cada liderança da semana anterior, bloqueios abertos, dependências entre frentes
+- **Ação:** Coletar status de todas as lideranças, resolver bloqueios e definir prioridades da semana
+- **Output:** Resumo de prioridades semanais publicado no Slack + tarefas atualizadas no Asana
+
+## Review de OKRs Semanal (Check-in Rápido)
+
+- **Frequência:** Toda sexta-feira às 16h00 BRT (`0 16 * * 5`)
+- **Trigger:** Agendamento automático
+- **Agent:** CEO + Head de Dados + Analista de KPIs
+- **Skill:** Revisão de OKRs
+- **Input:** Progresso dos KRs da semana, métricas de cada frente
+- **Ação:** Avaliar progresso dos OKRs, identificar KRs em risco e acionar planos de ação
+- **Output:** Status de OKRs atualizado no Asana + alerta no Slack para KRs abaixo de 60%
+
+## Review Mensal Completo
+
+- **Frequência:** Primeiro dia útil de cada mês às 10h00 BRT
+- **Trigger:** Agendamento automático
+- **Agent:** CEO + todas as lideranças
+- **Skill:** Revisão de OKRs (escopo mensal) + Briefing Executivo Diário (escopo mensal)
+- **Input:** Performance completa do mês — financeiro, comercial, técnico, criativo, retenção e tráfego
+- **Ação:** Conduzir review mensal consolidado, ajustar OKRs se necessário, definir foco do próximo mês
+- **Output:** Relatório mensal executivo enviado ao fundador + OKRs do mês seguinte definidos no Asana
+
+## Relatório de Agentes Live/Running
+
+- **Frequência:** Diariamente às 06h00 BRT (`0 6 * * *`)
+- **Trigger:** Agendamento automático
+- **Agent:** CEO + CTO
+- **Skill:** <preencher: skill de monitoramento de agentes em produção>
+- **Input:** Status de health dos agentes: Jordan Peterson, Head de Conversão, Media Buyer, Reports Generator
+- **Ação:** Verificar se todos os agentes Live estão operacionais; escalar ao CTO se qualquer um falhar
+- **Output:** Log de status enviado ao CEO + alerta imediato no Slack se houver falha
+
+## Alinhamento Estratégico Quinzenal com o Fundador
+
+- **Frequência:** A cada 15 dias, quarta-feira às 15h00 BRT (`0 15 */15 * 3`)
+- **Trigger:** Agendamento automático
+- **Agent:** CEO
+- **Skill:** Tomada de Decisão Estratégica
+- **Input:** Iniciativas em andamento, decisões pendentes, oportunidades e riscos identificados no período
+- **Ação:** Preparar pauta de alinhamento estratégico com o fundador — decisões que requerem sua validação, visão de roadmap e ajustes de rota
+- **Output:** Documento de decisões + pauta enviada ao fundador via Slack com antecedência de 24h

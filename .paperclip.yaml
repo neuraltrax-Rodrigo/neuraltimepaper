@@ -1,0 +1,687 @@
+schema: "paperclip/v1"
+agents:
+  alfredo-soares:
+    role: "general"
+    icon: "rocket"
+    capabilities: "Growth marketing specialist, develops growth strategies, implements growth campaigns"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  analista-de-kpis:
+    role: "general"
+    icon: "target"
+    capabilities: "Defines and tracks KPIs and metrics, creates KPI dashboards and reports, analyzes performance data, provides strategic insights, coordinates with data agents on metrics definitions, ensures data-driven decision making across the company"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  analista-de-nps:
+    role: "general"
+    icon: "heart"
+    capabilities: "Collects and analyzes NPS feedback, monitors customer satisfaction metrics, identifies improvement opportunities, creates NPS reports and dashboards, coordinates with Customer Experience on retention strategies"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  analista-de-relat-rios:
+    role: "general"
+    icon: "file-code"
+    capabilities: "Creates analytics reports, analyzes traffic and campaign data, generates performance dashboards, consolidates data from media buyer and SEO agent, provides actionable insights"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  analista-web:
+    role: "general"
+    icon: "search"
+    capabilities: "Analyzes website performance, SEO optimization, site speed and technical metrics, provides web analytics insights, monitors website health metrics"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  bdr:
+    role: "general"
+    icon: "telescope"
+    capabilities: "Identifies and pursues new business opportunities, conducts strategic outbound prospecting, builds partnerships and channel relationships, researches target accounts and decision makers, drives expansion into new markets and segments"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  branding:
+    role: "general"
+    icon: "sparkles"
+    capabilities: "Develops and maintains brand identity, creates brand guidelines and visual standards, ensures brand consistency across all channels, manages brand positioning and messaging, oversees brand campaigns and activations"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  ceo:
+    role: "ceo"
+    adapter:
+      config:
+        effort: "low"
+        model: "claude-sonnet-4-6"
+      type: "claude_local"
+    runtime:
+      heartbeat:
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+  cfo:
+    role: "cfo"
+    icon: "gem"
+    capabilities: "Lead financial strategy and fundraising, manage budgeting and financial controls, oversee accounting and tax compliance, build investor relationships"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+  churn-recovery:
+    role: "general"
+    icon: "heart"
+    capabilities: "Identifies at-risk customers, develops win-back campaigns, recovers churned customers, analyzes churn patterns, coordinates with Retention on recovery strategies, implements re-engagement programs"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  cobranca:
+    role: "general"
+    icon: "target"
+    capabilities: "Manages accounts receivable and collections, handles payment follow-ups and negotiations, manages billing inquiries, coordinates with CFO on financial processes, ensures timely cash flow"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  contratos:
+    role: "general"
+    icon: "file-code"
+    capabilities: "Manages contract creation, review, and negotiation, ensures legal compliance in agreements, tracks contract lifecycle and renewals, supports conversion team with contractual frameworks, identifies and mitigates contractual risks"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  copywriter:
+    role: "general"
+    icon: "wand"
+    capabilities: "Creates persuasive and engaging copy for all channels (email, social media, ads, landing pages, blog), develops brand voice and tone guidelines, writes sales copy and conversion-focused content, crafts storytelling narratives, produces scripts for video and audio content, optimizes copy for SEO and engagement metrics"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  criador-de-conte-do:
+    role: "general"
+    icon: "wand"
+    capabilities: "Creates marketing content, develops visual assets, supports design team with content production"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  criador-de-landing-page:
+    role: "general"
+    icon: "file-code"
+    capabilities: "Creates and optimizes landing pages, designs high-converting page layouts, implements landing page templates, tests page variations, ensures mobile responsiveness"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  cto:
+    role: "cto"
+    icon: "cpu"
+    capabilities: "Lead engineering hiring, set technical direction, manage roadmap execution, establish infrastructure and DevOps practices, own architectural decisions"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  customer-experience:
+    role: "general"
+    icon: "heart"
+    capabilities: "Manages end-to-end customer experience, resolves customer issues and escalations, improves customer satisfaction and NPS, designs customer journey maps, implements feedback loops and retention strategies"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  dale-carnegie:
+    role: "general"
+    icon: "heart"
+    capabilities: "Expert in relationship building and networking, develops client rapport strategies, coaches on interpersonal skills"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+  diretor-de-arte:
+    role: "general"
+    icon: "sparkles"
+    capabilities: "Designs visual content and creative assets, develops brand aesthetics, manages design systems and visual guidelines, creates design specifications for marketing materials, ensures visual consistency across channels"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        maxConcurrentRuns: 1
+  email-marketing:
+    role: "general"
+    icon: "mail"
+    capabilities: "Manages email marketing strategy and campaigns, creates and optimizes email sequences (nurture, onboarding, re-engagement), manages email lists and segmentation, tracks email performance metrics (open rate, CTR, conversions), conducts A/B testing on subject lines and content, coordinates email-driven traffic with Head de Tráfego and engagement programs with Head of Engagement"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  flavio-augusto:
+    role: "general"
+    icon: "star"
+    capabilities: "Trainer and coach for sales team, develops sales playbooks, conducts training sessions, improves sales team performance"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  gerador-de-scripts:
+    role: "general"
+    icon: "wand"
+    capabilities: "Generates customized sales scripts and conversation guides, adapts scripts based on call transcription insights, creates objection-handling scripts, tests script effectiveness, maintains script library for sales team"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  head-de-convers-o:
+    role: "general"
+    icon: "target"
+    capabilities: "Optimizes conversion funnels and rates, manages conversion experimentation and A/B testing, drives conversion strategy and improvements, analyzes user behavior and conversion barriers."
+    adapter:
+      config:
+        model: "claude-sonnet-4-5-20250929"
+      type: "claude_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  head-de-dados:
+    role: "general"
+    icon: "database"
+    capabilities: "Owns data strategy and pipeline, manages data collection and analysis, coordinates data flow across all company systems, ensures data quality and governance, leads data team and defines data priorities"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        maxConcurrentRuns: 1
+  head-de-engajamento:
+    role: "general"
+    icon: "heart"
+    capabilities: "Drives customer engagement strategy, owns user retention and satisfaction, manages community and onboarding programs, oversees customer success initiatives, and drives engagement metrics and roadmap."
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  head-de-gest-o:
+    role: "general"
+    icon: "cog"
+    capabilities: "Owns operational management, process optimization, team coordination, and administrative functions. Manages day-to-day operations, implements management systems, and supports leadership with execution."
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+    permissions:
+      canCreateAgents: true
+  head-de-growth:
+    role: "cmo"
+    icon: "crown"
+    capabilities: "Drives growth strategy, market expansion, marketing, content, social media, and revenue generation. Owns growth metrics and marketing roadmap."
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  head-de-processos:
+    role: "general"
+    icon: "cog"
+    capabilities: "Owns process strategy and workflow optimization, manages process improvement initiatives, coordinates cross-functional process execution, ensures process quality and efficiency, leads process team and defines process priorities"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  head-de-reten-o:
+    role: "general"
+    icon: "heart"
+    capabilities: "Drives customer retention strategy, manages user retention and churn reduction, develops retention programs and loyalty initiatives, optimizes customer lifetime value, analyzes retention metrics and trends."
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  head-de-tr-fego:
+    role: "general"
+    icon: "target"
+    capabilities: "Leads traffic acquisition strategy, manages customer acquisition channels, optimizes conversion funnels, and drives traffic growth initiatives."
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  jordan-peterson:
+    role: "general"
+    icon: "brain"
+    capabilities: "Expert in psychology and behavioral science, reports to Head de Gestão"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+  mapeador-de-obje-es:
+    role: "general"
+    icon: "target"
+    capabilities: "Maps and categorizes sales objections from call transcriptions, develops objection response strategies, tracks objection patterns and trends, creates objection handling playbooks, feeds insights back to conversion optimization"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  media-buyer:
+    role: "general"
+    icon: "target"
+    capabilities: "Manages paid media campaigns, optimizes ad spend, handles budget allocation across channels, analyzes campaign performance metrics, and drives customer acquisition through paid channels."
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  napole-o-hill:
+    role: "general"
+    icon: "brain"
+    capabilities: "Mindset and motivational coach, develops success philosophies, creates motivational content for team"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  paulo-cuenca:
+    role: "general"
+    icon: "globe"
+    capabilities: "Gerencia conteúdo e engajamento em mídias sociais reportando para Social Media"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+  pedro-sobral:
+    role: "general"
+    icon: "wand"
+    capabilities: "Creates content for traffic campaigns, develops ad copy and creative assets, supports Head de Tráfego with content production, collaborates with Social Media and Branding teams"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  product-manager:
+    role: "pm"
+    icon: "package"
+    capabilities: "Owns product strategy and roadmap, defines features and priorities, drives product-market fit, manages product lifecycle, coordinates with engineering and design teams"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  reports-generator:
+    role: "general"
+    icon: "file-code"
+    capabilities: "Generates and manages traffic analytics reports, tracks KPIs and metrics, creates performance dashboards, analyzes traffic data trends, produces insights and recommendations for optimization, and manages reporting infrastructure."
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  rian-dutra:
+    role: "general"
+    icon: "heart"
+    capabilities: "Manages client relationships, handles client communications, maintains customer rapport, supports relationship building initiatives"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+  roger-feder:
+    role: "general"
+    icon: "target"
+    capabilities: "Business strategy development, competitive analysis, strategic planning"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  sdr:
+    role: "general"
+    icon: "radar"
+    capabilities: "Qualifies inbound leads, conducts outbound prospecting, schedules qualified meetings for sales team, manages top-of-funnel pipeline, tracks lead quality metrics"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  seo-agent:
+    role: "general"
+    icon: "search"
+    capabilities: "Manages SEO strategy and optimization, conducts keyword research and analysis, optimizes on-page and technical SEO, manages content strategy for search visibility, tracks rankings and organic traffic, and drives organic customer acquisition."
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  social-media:
+    role: "general"
+    icon: "message-square"
+    capabilities: "Manages social media strategy and presence, creates social media content, manages community engagement and interactions, monitors social media metrics and trends, runs social media campaigns, oversees social listening and reputation management"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        maxConcurrentRuns: 1
+  suporte:
+    role: "general"
+    icon: "shield"
+    capabilities: "Handles customer support tickets and inquiries, resolves product issues and complaints, manages support knowledge base, tracks support metrics and SLAs, escalates complex cases to Customer Experience manager"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  tallis-gomes:
+    role: "general"
+    icon: "heart"
+    capabilities: "Customer success specialist, develops customer retention strategies, coaches CS team"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  transcri-o-de-chamadas:
+    role: "general"
+    icon: "message-square"
+    capabilities: "Transcribes and analyzes sales calls, extracts key insights and action items from conversations, identifies conversion opportunities and objection patterns, provides call quality feedback, generates structured call summaries"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  ui-designer:
+    role: "designer"
+    icon: "sparkles"
+    capabilities: "Creates user interface designs, designs UI components and layouts, creates visual design systems, ensures design consistency, collaborates with web designer on visual projects"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  upsell-agent:
+    role: "general"
+    icon: "rocket"
+    capabilities: "Identifies upsell opportunities, manages upgrade campaigns, coordinates with Retention on expansion strategies, drives revenue growth through existing customer base, creates upsell offers and messaging"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  ux-designer:
+    role: "designer"
+    icon: "heart"
+    capabilities: "Creates user experience designs, conducts user research, designs user flows and journey maps, prototypes user interfaces, ensures usability and accessibility"
+    adapter:
+      config:
+        model: "opencode/minimax-m2.5-free"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+  web-designer:
+    role: "general"
+    icon: "wand"
+    capabilities: "Designs user interfaces and user experiences for web products, creates wireframes and prototypes, develops web design systems and component libraries, optimizes website layouts and visual design, ensures design consistency across web properties"
+    adapter:
+      config:
+        model: "opencode/gpt-5-nano"
+      type: "opencode_local"
+    runtime:
+      heartbeat:
+        enabled: true
+        maxConcurrentRuns: 1
+company:
+  brandColor: "#e87911"
+  logoPath: "images/company-logo.png"
+projects:
+  onboarding:
+    color: "#6366f1"
+    status: "in_progress"
+routines:
+  coletar-novidades-do-paulo-cuenca:
+    triggers:
+      -
+        kind: "schedule"
+        cronExpression: "0 10 * * 1-5"
+        label: "schedule"
+        timezone: "America/Sao_Paulo"
+  slack-daily-digest:
+    concurrencyPolicy: "skip_if_active"
+    triggers:
+      -
+        kind: "schedule"
+        cronExpression: "0 9 * * *"
+        label: "Daily 9am digest"
+        timezone: "America/Sao_Paulo"
+      -
+        kind: "webhook"
+        label: "Slack webhook trigger"
+      -
+        kind: "schedule"
+        cronExpression: "0 9 * * *"
+        label: "Daily 9am digest"
+        timezone: "America/Sao_Paulo"
+      -
+        kind: "webhook"
+        label: "Slack webhook trigger"
+sidebar:
+  agents:
+    - "ceo"
+    - "cfo"
+    - "cto"
+    - "head-de-dados"
+    - "head-de-gest-o"
+    - "head-de-growth"
+    - "head-de-processos"
+    - "product-manager"
+    - "cobranca"
+    - "analista-de-kpis"
+    - "dale-carnegie"
+    - "flavio-augusto"
+    - "jordan-peterson"
+    - "napole-o-hill"
+    - "roger-feder"
+    - "tallis-gomes"
+    - "alfredo-soares"
+    - "head-de-convers-o"
+    - "head-de-engajamento"
+    - "head-de-reten-o"
+    - "head-de-tr-fego"
+    - "bdr"
+    - "contratos"
+    - "sdr"
+    - "transcri-o-de-chamadas"
+    - "branding"
+    - "copywriter"
+    - "diretor-de-arte"
+    - "paulo-cuenca"
+    - "social-media"
+    - "web-designer"
+    - "churn-recovery"
+    - "customer-experience"
+    - "upsell-agent"
+    - "analista-de-relat-rios"
+    - "email-marketing"
+    - "media-buyer"
+    - "pedro-sobral"
+    - "reports-generator"
+    - "seo-agent"
+    - "gerador-de-scripts"
+    - "mapeador-de-obje-es"
+    - "criador-de-conte-do"
+    - "ux-designer"
+    - "analista-web"
+    - "criador-de-landing-page"
+    - "rian-dutra"
+    - "ui-designer"
+    - "analista-de-nps"
+    - "suporte"
+  projects:
+    - "onboarding"

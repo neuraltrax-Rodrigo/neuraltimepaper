@@ -1,0 +1,60 @@
+---
+- name: "Preço alto"
+  diagnosis: "ROI não visto ou orçamento limitado"
+  questions:
+    - "Qual é o principal objetivo desta aquisição?"
+    - "Qual é o budget disponível para este projeto?"
+    - "Qual seria o ROI esperado e o payback?"
+  short_response: "Entendo. Vamos quantificar o ROI e o payback com números reais para justificar o investimento."
+  long_script: |
+    Primeiro, reconheça a preocupação de custo e direcione para ROI e payback. Mostre métricas simples: custo total de propriedade (TCO), economia anual, e ROI em 12 meses. Proposta de fluxo:
+    1) Apresente um cenário conservador de ROI baseado em dados históricos ou benchmarks do cliente.
+    2) Mostre o payback em meses com números claros.
+    3) Agende um piloto de 60 dias para medir ganho real.
+  follow_up: "Agendar nova reunião em 2 semanas para revisar números de ROI"
+- name: "Não é prioridade agora"
+  diagnosis: "Outras prioridades adiam decisão"
+  questions:
+    - "Quais são as prioridades atuais?"
+    - "Qual é o impacto da prioridade atual se não for resolvida agora?"
+    - "Podemos marcar uma revisão em 4-6 semanas?"
+  short_response: "Entendo. Vamos alinhar uma data de revisão para reavaliar o valor.]"
+  long_script: |
+    Valide a objeção com empatia. Em seguida, proponha um caminho de valor alinhado a um calendário realista:
+    1) Pergunte sobre prioridades atuais e impacto.
+    2) Proponha uma reunião de validação com métricas específicas daqui a algumas semanas.
+    3) Ofereça um mini-piloto ou prova de valor para manter o impulso.
+  follow_up: "Propor data de revisão dentro de 4-6 semanas"
+- name: "Já usamos concorrente"
+  diagnosis: "Solução existente; ROI incremental necessário"
+  questions:
+    - "O que a solução atual entrega bem?"
+    - "Quais gaps existem nessa solução?"
+    - "Você aceitaria um teste comparativo curto?"
+  short_response: "Interessante. Vamos ver um teste curto para comparar ROI e funcionalidades sem custo adicional."
+  long_script: |
+    Reconheça o uso atual e posicione o valor diferencial com respeito às necessidades não atendidas pela solução existente. Proposta:
+    1) Liste gaps críticos não cobertos pela solução atual.
+    2) Proponha um piloto com KPIs claros de 30-60 dias.
+    3) Defina métricas de sucesso para comparação.
+  follow_up: "Agendar piloto comparativo de 30 dias"
+- name: "Não vejo ROI"
+  diagnosis: "Cliente não enxerga retorno financeiro"
+  questions:
+    - "Como você mede ROI hoje?"
+    - "Quais métricas definem sucesso?"
+    - "Podemos modelar um ROI simples em 90 dias?"
+  short_response: "Vamos construir um caso de ROI com cenários conservadores para você avaliar."
+  long_script: |
+    Construa um caso de ROI com três cenários (baixo, médio, alto), incluindo custos, economias e ganhos não financeiros (tempo, risco reduzido). Forneça um template para o cliente preencher valores reais e discutir em uma próxima reunião.
+  follow_up: "Fornecer template de ROI e agendar revisão de 2-3 semanas"
+- name: "Orçamento insuficiente"
+  diagnosis: "Budget atual não cobre a compra"
+  questions:
+    - "Qual é o teto de orçamento?"
+    - "Há possibilidade de implantação em fases ou pagamento escalonado?"
+  short_response: "Podemos considerar implantação em fases com aprovação por etapas."
+  long_script: |
+    Ofereça um plano em fases com milestones, custos por fase e critérios de sucesso para avanço ao próximo estágio.
+    Inclua opções de pagamento ou financiamento, se aplicável, e demonstre valor incremental a cada fase.
+  follow_up: "Propor plano em 3 fases com milestones" 
